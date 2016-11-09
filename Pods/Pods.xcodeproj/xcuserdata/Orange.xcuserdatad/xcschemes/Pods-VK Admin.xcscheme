@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C222B4E51DD0FD7100F0B87C"
-               BuildableName = "VK Admin.app"
-               BlueprintName = "VK Admin"
-               ReferencedContainer = "container:VK Admin.xcodeproj">
+               BlueprintIdentifier = "098B6962D3B3C96CE9D7DB28A0F20F06"
+               BuildableName = "Pods_VK_Admin.framework"
+               BlueprintName = "Pods-VK Admin"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C222B4E51DD0FD7100F0B87C"
-            BuildableName = "VK Admin.app"
-            BlueprintName = "VK Admin"
-            ReferencedContainer = "container:VK Admin.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C222B4E51DD0FD7100F0B87C"
-            BuildableName = "VK Admin.app"
-            BlueprintName = "VK Admin"
-            ReferencedContainer = "container:VK Admin.xcodeproj">
+            BlueprintIdentifier = "098B6962D3B3C96CE9D7DB28A0F20F06"
+            BuildableName = "Pods_VK_Admin.framework"
+            BlueprintName = "Pods-VK Admin"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C222B4E51DD0FD7100F0B87C"
-            BuildableName = "VK Admin.app"
-            BlueprintName = "VK Admin"
-            ReferencedContainer = "container:VK Admin.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

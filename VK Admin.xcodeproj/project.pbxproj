@@ -7,17 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7419B8698633345ADC5CAFFE /* Pods_VK_Admin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A31C4FBBE8B9F5173665FFC /* Pods_VK_Admin.framework */; };
+		C204B9F41DD1835E009E06E8 /* GroupMemberList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9E21DD1835D009E06E8 /* GroupMemberList.swift */; };
+		C204B9F51DD1835E009E06E8 /* GroupDialogsMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9E31DD1835D009E06E8 /* GroupDialogsMessage.swift */; };
+		C204B9F61DD1835E009E06E8 /* GroupDialogsUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9E41DD1835D009E06E8 /* GroupDialogsUser.swift */; };
+		C204B9F71DD1835E009E06E8 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9E51DD1835D009E06E8 /* AppUser.swift */; };
+		C204B9F81DD1835E009E06E8 /* GroupManagementUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9E61DD1835D009E06E8 /* GroupManagementUser.swift */; };
+		C204B9F91DD1835E009E06E8 /* GroupManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9E71DD1835D009E06E8 /* GroupManagement.swift */; };
+		C204B9FA1DD1835E009E06E8 /* GroupManagementPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9E81DD1835D009E06E8 /* GroupManagementPosition.swift */; };
+		C204B9FB1DD1835E009E06E8 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9E91DD1835D009E06E8 /* App.swift */; };
+		C204B9FC1DD1835E009E06E8 /* GroupDialogsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9EA1DD1835D009E06E8 /* GroupDialogsNetwork.swift */; };
+		C204B9FD1DD1835E009E06E8 /* GroupNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9EB1DD1835D009E06E8 /* GroupNetwork.swift */; };
+		C204B9FE1DD1835E009E06E8 /* GroupManagementNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9EC1DD1835D009E06E8 /* GroupManagementNetwork.swift */; };
+		C204B9FF1DD1835E009E06E8 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9ED1DD1835D009E06E8 /* Defaults.swift */; };
+		C204BA001DD1835E009E06E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9EE1DD1835D009E06E8 /* User.swift */; };
+		C204BA011DD1835E009E06E8 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9EF1DD1835D009E06E8 /* Group.swift */; };
+		C204BA021DD1835E009E06E8 /* GroupSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9F01DD1835E009E06E8 /* GroupSubject.swift */; };
+		C204BA031DD1835E009E06E8 /* GroupDialogsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9F11DD1835E009E06E8 /* GroupDialogsList.swift */; };
+		C204BA041DD1835E009E06E8 /* GroupDialogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9F21DD1835E009E06E8 /* GroupDialogs.swift */; };
+		C204BA051DD1835E009E06E8 /* GroupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9F31DD1835E009E06E8 /* GroupData.swift */; };
+		C204BA0E1DD18377009E06E8 /* deactivated_200.gif in Resources */ = {isa = PBXBuildFile; fileRef = C204BA071DD18377009E06E8 /* deactivated_200.gif */; };
+		C204BA0F1DD18377009E06E8 /* deactivated_200.png in Resources */ = {isa = PBXBuildFile; fileRef = C204BA081DD18377009E06E8 /* deactivated_200.png */; };
+		C204BA101DD18377009E06E8 /* iOS@VKU.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C204BA091DD18377009E06E8 /* iOS@VKU.jpg */; };
+		C204BA111DD18377009E06E8 /* vkb.png in Resources */ = {isa = PBXBuildFile; fileRef = C204BA0A1DD18377009E06E8 /* vkb.png */; };
+		C204BA121DD18377009E06E8 /* vkba_150.png in Resources */ = {isa = PBXBuildFile; fileRef = C204BA0B1DD18377009E06E8 /* vkba_150.png */; };
+		C204BA131DD18377009E06E8 /* vkw.png in Resources */ = {isa = PBXBuildFile; fileRef = C204BA0C1DD18377009E06E8 /* vkw.png */; };
+		C204BA141DD18377009E06E8 /* vkwa.png in Resources */ = {isa = PBXBuildFile; fileRef = C204BA0D1DD18377009E06E8 /* vkwa.png */; };
+		C204BA1F1DD2154E009E06E8 /* SwiftyVKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204BA1E1DD2154E009E06E8 /* SwiftyVKManager.swift */; };
 		C222B4EA1DD0FD7100F0B87C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C222B4E91DD0FD7100F0B87C /* AppDelegate.swift */; };
-		C222B4EC1DD0FD7100F0B87C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C222B4EB1DD0FD7100F0B87C /* ViewController.swift */; };
+		C222B4EC1DD0FD7100F0B87C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C222B4EB1DD0FD7100F0B87C /* WelcomeViewController.swift */; };
 		C222B4EF1DD0FD7100F0B87C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C222B4ED1DD0FD7100F0B87C /* Main.storyboard */; };
 		C222B4F11DD0FD7100F0B87C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C222B4F01DD0FD7100F0B87C /* Assets.xcassets */; };
 		C222B4F41DD0FD7100F0B87C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C222B4F21DD0FD7100F0B87C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49F11ABA1DF67A9CF183D7F9 /* Pods-VK Admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK Admin.release.xcconfig"; path = "Pods/Target Support Files/Pods-VK Admin/Pods-VK Admin.release.xcconfig"; sourceTree = "<group>"; };
+		5FA1297CCF30669EAD6473A7 /* Pods-VK Admin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK Admin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VK Admin/Pods-VK Admin.debug.xcconfig"; sourceTree = "<group>"; };
+		8A31C4FBBE8B9F5173665FFC /* Pods_VK_Admin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK_Admin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C204B9E21DD1835D009E06E8 /* GroupMemberList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupMemberList.swift; sourceTree = "<group>"; };
+		C204B9E31DD1835D009E06E8 /* GroupDialogsMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDialogsMessage.swift; sourceTree = "<group>"; };
+		C204B9E41DD1835D009E06E8 /* GroupDialogsUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDialogsUser.swift; sourceTree = "<group>"; };
+		C204B9E51DD1835D009E06E8 /* AppUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		C204B9E61DD1835D009E06E8 /* GroupManagementUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupManagementUser.swift; sourceTree = "<group>"; };
+		C204B9E71DD1835D009E06E8 /* GroupManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupManagement.swift; sourceTree = "<group>"; };
+		C204B9E81DD1835D009E06E8 /* GroupManagementPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupManagementPosition.swift; sourceTree = "<group>"; };
+		C204B9E91DD1835D009E06E8 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		C204B9EA1DD1835D009E06E8 /* GroupDialogsNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDialogsNetwork.swift; sourceTree = "<group>"; };
+		C204B9EB1DD1835D009E06E8 /* GroupNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupNetwork.swift; sourceTree = "<group>"; };
+		C204B9EC1DD1835D009E06E8 /* GroupManagementNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupManagementNetwork.swift; sourceTree = "<group>"; };
+		C204B9ED1DD1835D009E06E8 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		C204B9EE1DD1835D009E06E8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C204B9EF1DD1835D009E06E8 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		C204B9F01DD1835E009E06E8 /* GroupSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSubject.swift; sourceTree = "<group>"; };
+		C204B9F11DD1835E009E06E8 /* GroupDialogsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDialogsList.swift; sourceTree = "<group>"; };
+		C204B9F21DD1835E009E06E8 /* GroupDialogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDialogs.swift; sourceTree = "<group>"; };
+		C204B9F31DD1835E009E06E8 /* GroupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupData.swift; sourceTree = "<group>"; };
+		C204BA071DD18377009E06E8 /* deactivated_200.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = deactivated_200.gif; sourceTree = "<group>"; };
+		C204BA081DD18377009E06E8 /* deactivated_200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deactivated_200.png; sourceTree = "<group>"; };
+		C204BA091DD18377009E06E8 /* iOS@VKU.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iOS@VKU.jpg"; sourceTree = "<group>"; };
+		C204BA0A1DD18377009E06E8 /* vkb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vkb.png; sourceTree = "<group>"; };
+		C204BA0B1DD18377009E06E8 /* vkba_150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vkba_150.png; sourceTree = "<group>"; };
+		C204BA0C1DD18377009E06E8 /* vkw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vkw.png; sourceTree = "<group>"; };
+		C204BA0D1DD18377009E06E8 /* vkwa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vkwa.png; sourceTree = "<group>"; };
+		C204BA1E1DD2154E009E06E8 /* SwiftyVKManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyVKManager.swift; sourceTree = "<group>"; };
 		C222B4E61DD0FD7100F0B87C /* VK Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C222B4E91DD0FD7100F0B87C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C222B4EB1DD0FD7100F0B87C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C222B4EB1DD0FD7100F0B87C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C222B4EE1DD0FD7100F0B87C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C222B4F01DD0FD7100F0B87C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C222B4F31DD0FD7100F0B87C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -29,17 +85,104 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7419B8698633345ADC5CAFFE /* Pods_VK_Admin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C0E9ED424FDDD29A02ED97A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FA1297CCF30669EAD6473A7 /* Pods-VK Admin.debug.xcconfig */,
+				49F11ABA1DF67A9CF183D7F9 /* Pods-VK Admin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9509ACF7139E2E497DC69271 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A31C4FBBE8B9F5173665FFC /* Pods_VK_Admin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C204BA061DD18377009E06E8 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				C204BA071DD18377009E06E8 /* deactivated_200.gif */,
+				C204BA081DD18377009E06E8 /* deactivated_200.png */,
+				C204BA091DD18377009E06E8 /* iOS@VKU.jpg */,
+				C204BA0A1DD18377009E06E8 /* vkb.png */,
+				C204BA0B1DD18377009E06E8 /* vkba_150.png */,
+				C204BA0C1DD18377009E06E8 /* vkw.png */,
+				C204BA0D1DD18377009E06E8 /* vkwa.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		C204BA151DD18396009E06E8 /* GroupManagement */ = {
+			isa = PBXGroup;
+			children = (
+				C204B9E61DD1835D009E06E8 /* GroupManagementUser.swift */,
+				C204B9E71DD1835D009E06E8 /* GroupManagement.swift */,
+				C204B9E81DD1835D009E06E8 /* GroupManagementPosition.swift */,
+				C204B9EC1DD1835D009E06E8 /* GroupManagementNetwork.swift */,
+			);
+			name = GroupManagement;
+			sourceTree = "<group>";
+		};
+		C204BA161DD183B7009E06E8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C204B9E91DD1835D009E06E8 /* App.swift */,
+				C204B9E51DD1835D009E06E8 /* AppUser.swift */,
+				C204B9ED1DD1835D009E06E8 /* Defaults.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		C204BA171DD183C8009E06E8 /* GroupDialogs */ = {
+			isa = PBXGroup;
+			children = (
+				C204B9E31DD1835D009E06E8 /* GroupDialogsMessage.swift */,
+				C204B9E41DD1835D009E06E8 /* GroupDialogsUser.swift */,
+				C204B9EA1DD1835D009E06E8 /* GroupDialogsNetwork.swift */,
+				C204B9F11DD1835E009E06E8 /* GroupDialogsList.swift */,
+				C204B9F21DD1835E009E06E8 /* GroupDialogs.swift */,
+			);
+			name = GroupDialogs;
+			sourceTree = "<group>";
+		};
+		C204BA181DD18404009E06E8 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				C204B9EF1DD1835D009E06E8 /* Group.swift */,
+				C204B9F31DD1835E009E06E8 /* GroupData.swift */,
+				C204B9F01DD1835E009E06E8 /* GroupSubject.swift */,
+				C204B9E21DD1835D009E06E8 /* GroupMemberList.swift */,
+				C204B9EB1DD1835D009E06E8 /* GroupNetwork.swift */,
+			);
+			name = Group;
+			sourceTree = "<group>";
+		};
+		C204BA191DD2130E009E06E8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C222B4EB1DD0FD7100F0B87C /* WelcomeViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		C222B4DD1DD0FD7100F0B87C = {
 			isa = PBXGroup;
 			children = (
 				C222B4E81DD0FD7100F0B87C /* VK Admin */,
 				C222B4E71DD0FD7100F0B87C /* Products */,
+				6C0E9ED424FDDD29A02ED97A /* Pods */,
+				9509ACF7139E2E497DC69271 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,8 +198,15 @@
 			isa = PBXGroup;
 			children = (
 				C222B4E91DD0FD7100F0B87C /* AppDelegate.swift */,
-				C222B4EB1DD0FD7100F0B87C /* ViewController.swift */,
 				C222B4ED1DD0FD7100F0B87C /* Main.storyboard */,
+				C204BA191DD2130E009E06E8 /* ViewControllers */,
+				C204BA161DD183B7009E06E8 /* App */,
+				C204BA171DD183C8009E06E8 /* GroupDialogs */,
+				C204BA181DD18404009E06E8 /* Group */,
+				C204BA151DD18396009E06E8 /* GroupManagement */,
+				C204B9EE1DD1835D009E06E8 /* User.swift */,
+				C204BA1E1DD2154E009E06E8 /* SwiftyVKManager.swift */,
+				C204BA061DD18377009E06E8 /* img */,
 				C222B4F01DD0FD7100F0B87C /* Assets.xcassets */,
 				C222B4F21DD0FD7100F0B87C /* LaunchScreen.storyboard */,
 				C222B4F51DD0FD7100F0B87C /* Info.plist */,
@@ -71,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C222B4F81DD0FD7100F0B87C /* Build configuration list for PBXNativeTarget "VK Admin" */;
 			buildPhases = (
+				07AAF48AD532209E915624EE /* [CP] Check Pods Manifest.lock */,
 				C222B4E21DD0FD7100F0B87C /* Sources */,
 				C222B4E31DD0FD7100F0B87C /* Frameworks */,
 				C222B4E41DD0FD7100F0B87C /* Resources */,
+				BDDDC3D1E38EADA628E41481 /* [CP] Embed Pods Frameworks */,
+				E14D2F1033B8F96ADC92E379 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,21 +276,95 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C204BA131DD18377009E06E8 /* vkw.png in Resources */,
+				C204BA121DD18377009E06E8 /* vkba_150.png in Resources */,
 				C222B4F41DD0FD7100F0B87C /* LaunchScreen.storyboard in Resources */,
+				C204BA101DD18377009E06E8 /* iOS@VKU.jpg in Resources */,
+				C204BA111DD18377009E06E8 /* vkb.png in Resources */,
 				C222B4F11DD0FD7100F0B87C /* Assets.xcassets in Resources */,
+				C204BA141DD18377009E06E8 /* vkwa.png in Resources */,
+				C204BA0E1DD18377009E06E8 /* deactivated_200.gif in Resources */,
 				C222B4EF1DD0FD7100F0B87C /* Main.storyboard in Resources */,
+				C204BA0F1DD18377009E06E8 /* deactivated_200.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07AAF48AD532209E915624EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BDDDC3D1E38EADA628E41481 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VK Admin/Pods-VK Admin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E14D2F1033B8F96ADC92E379 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VK Admin/Pods-VK Admin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C222B4E21DD0FD7100F0B87C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C222B4EC1DD0FD7100F0B87C /* ViewController.swift in Sources */,
+				C222B4EC1DD0FD7100F0B87C /* WelcomeViewController.swift in Sources */,
+				C204B9FF1DD1835E009E06E8 /* Defaults.swift in Sources */,
+				C204B9F51DD1835E009E06E8 /* GroupDialogsMessage.swift in Sources */,
+				C204BA021DD1835E009E06E8 /* GroupSubject.swift in Sources */,
+				C204BA011DD1835E009E06E8 /* Group.swift in Sources */,
+				C204BA051DD1835E009E06E8 /* GroupData.swift in Sources */,
+				C204B9F91DD1835E009E06E8 /* GroupManagement.swift in Sources */,
+				C204B9FB1DD1835E009E06E8 /* App.swift in Sources */,
+				C204B9FD1DD1835E009E06E8 /* GroupNetwork.swift in Sources */,
+				C204B9FC1DD1835E009E06E8 /* GroupDialogsNetwork.swift in Sources */,
 				C222B4EA1DD0FD7100F0B87C /* AppDelegate.swift in Sources */,
+				C204BA001DD1835E009E06E8 /* User.swift in Sources */,
+				C204B9F41DD1835E009E06E8 /* GroupMemberList.swift in Sources */,
+				C204B9F71DD1835E009E06E8 /* AppUser.swift in Sources */,
+				C204BA031DD1835E009E06E8 /* GroupDialogsList.swift in Sources */,
+				C204B9F61DD1835E009E06E8 /* GroupDialogsUser.swift in Sources */,
+				C204B9FE1DD1835E009E06E8 /* GroupManagementNetwork.swift in Sources */,
+				C204BA041DD1835E009E06E8 /* GroupDialogs.swift in Sources */,
+				C204B9FA1DD1835E009E06E8 /* GroupManagementPosition.swift in Sources */,
+				C204BA1F1DD2154E009E06E8 /* SwiftyVKManager.swift in Sources */,
+				C204B9F81DD1835E009E06E8 /* GroupManagementUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +485,7 @@
 		};
 		C222B4F91DD0FD7100F0B87C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FA1297CCF30669EAD6473A7 /* Pods-VK Admin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "VK Admin/Info.plist";
@@ -270,6 +498,7 @@
 		};
 		C222B4FA1DD0FD7100F0B87C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49F11ABA1DF67A9CF183D7F9 /* Pods-VK Admin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "VK Admin/Info.plist";
@@ -299,6 +528,7 @@
 				C222B4FA1DD0FD7100F0B87C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
