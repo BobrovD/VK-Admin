@@ -12,14 +12,14 @@ class GroupManagementUser{
 	var user: User
 	var position: GroupManagementPosition
 
-	init(id: Int, name: String, avatar: String, position: String){
+	init(id: Int, name: String, avatar: String, position: Int){
 		self.position = GroupManagementPosition(position: position)	//почему нельзя после super.init поставить self.position?!
 		self.user = User.init(id: id, name: name, avatar: avatar)
 	}
 
-	func SetPosition(position: String?){
-		if let p = position {
-			self.position = GroupManagementPosition(position: p)
+	func SetPosition(position: Int){
+		if position > 0 {
+			self.position = GroupManagementPosition(position: position)
 		} else {
 		/* eсли nil, то удаляем из администраторов
 			deinit //??

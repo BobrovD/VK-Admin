@@ -39,6 +39,7 @@
 		C222B4EF1DD0FD7100F0B87C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C222B4ED1DD0FD7100F0B87C /* Main.storyboard */; };
 		C222B4F11DD0FD7100F0B87C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C222B4F01DD0FD7100F0B87C /* Assets.xcassets */; };
 		C222B4F41DD0FD7100F0B87C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C222B4F21DD0FD7100F0B87C /* LaunchScreen.storyboard */; };
+		C22B1F2B1DD5053D00706800 /* GroupListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B1F2A1DD5053D00706800 /* GroupListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		C222B4F01DD0FD7100F0B87C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C222B4F31DD0FD7100F0B87C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C222B4F51DD0FD7100F0B87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C22B1F2A1DD5053D00706800 /* GroupListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				C222B4EB1DD0FD7100F0B87C /* WelcomeViewController.swift */,
+				C22B1F2A1DD5053D00706800 /* GroupListTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				C204B9F41DD1835E009E06E8 /* GroupMemberList.swift in Sources */,
 				C204B9F71DD1835E009E06E8 /* AppUser.swift in Sources */,
 				C204BA031DD1835E009E06E8 /* GroupDialogsList.swift in Sources */,
+				C22B1F2B1DD5053D00706800 /* GroupListTableViewController.swift in Sources */,
 				C204B9F61DD1835E009E06E8 /* GroupDialogsUser.swift in Sources */,
 				C204B9FE1DD1835E009E06E8 /* GroupManagementNetwork.swift in Sources */,
 				C204BA041DD1835E009E06E8 /* GroupDialogs.swift in Sources */,

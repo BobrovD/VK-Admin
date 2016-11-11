@@ -15,18 +15,24 @@ class WelcomeViewController: UIViewController {
 	@IBOutlet weak var CheckAuthIndicator: UIActivityIndicatorView!
 	@IBOutlet weak var AuthButton: UIButton!
 
+	@IBOutlet weak var tmpButtonToShowNextScreen: UIButton!
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-		VK.logOut()
 		print(VK.state)
 		switch VK.state{
 			case .configured, .unknown:
 				CheckAuthIndicator.isHidden = true
 				AuthButton.isHidden = false
 			case .authorized:
-				print("authorized")
-				//go to grouplist screen
+				App.user.LoadUser()
+				tmpButtonToShowNextScreen.isHidden = false
+//				let GroupListTVC = GroupListTableViewController()
+//				navigationController?.pushViewController(GroupListTVC, animated: true)
+				print("try to use segue")
+				self.performSegue(withIdentifier: "AuthSuccessSegue", sender: self)
+				performSegue(withIdentifier: "AuthSuccessSegue", sender: nil)
 			break;
 		}
 	}

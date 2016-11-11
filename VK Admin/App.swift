@@ -12,11 +12,14 @@ import SwiftyVK
 
 class Application{
 	var authorized: Bool
-	var user: ApplicationUser?
+	var user: ApplicationUser
 	var VKManager: SwiftyVKManager
 
 	init(){
 		self.authorized = false
 		self.VKManager = SwiftyVKManager()
+		self.user = ApplicationUser()
 	}
 }
+
+let App = Application()

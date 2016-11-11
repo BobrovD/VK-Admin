@@ -15,12 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
-	var AppUser = ApplicationUser()
-	var App = Application()
-
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
 		print("app1")
 		_ = SwiftyVKManager()
+
 		return true
 	}
 

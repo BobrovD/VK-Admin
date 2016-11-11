@@ -7,27 +7,23 @@
 //
 
 import Foundation
+import SwiftyVK
 
 class ApplicationUser{
 	var id: Int?
 	var name: String?
 	var avatar: String?
-	var token: String?
 
 	init(){}
 
-	func LoadUser() -> Bool{
-		return false //load user from data
-	}
-
-	func CheckToken() -> Bool{
-		return true
-	}
-
-	func SetUser(id: Int, name: String, avatar: String, token: String){
-		self.token = token
-		self.id = id
-		self.name = name
-		self.avatar = avatar
+	func LoadUser(){
+		VK.API.Users.get([VK.Arg.fields: "photo_50"]).send(
+			onSuccess: { response in
+				print(response)
+				self.id = response[0]["id"].intValue
+				self.name = response[0]["first_name"].stringValue + response[0]["second_name"].stringValue
+				self.avatar = response[0]["photo_50"].stringValue
+			}
+		)
 	}
 }
