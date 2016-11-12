@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyVK
 
 class User {
 	var id: Int

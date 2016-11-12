@@ -8,6 +8,8 @@
 
 import Foundation
 
+var GroupsDialogs: [Int: GroupDialog] = [:]
+
 class GroupDialog {
 	var id: Int
 	var withUser: GroupDialogsUser
@@ -22,15 +24,6 @@ class GroupDialog {
 		self.messagesHistory = messagesHistory //convert [GroupDialogsMessage] to [UInt: GroupDialogsMessage] and fix input value
 	}
 
-	func NewOutputMessage(text: String) {
-
-	}
-
-	func SetInputMessagesReaded() {
-
-	}
-
-	func UpdateMessages(messages: [GroupDialogsMessage]) {
-
+	class func LoadUnreadedDialogs(offset: String){
 	}
 }

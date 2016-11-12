@@ -7,33 +7,12 @@
 //
 
 import UIKit
-import SwiftyVK
 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-		print("app1")
-		_ = SwiftyVKManager()
-
-		return true
-	}
-
-	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-		print("app2")
-		VK.process(url: url, options: options)
-		return true
-	}
-        
-        
-	func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-		print("app3")
-		VK.process(url: url, sourceApplication: sourceApplication)
-		return true
-	}
 
 
 	func applicationWillResignActive(_ application: UIApplication) {

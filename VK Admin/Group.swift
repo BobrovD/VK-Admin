@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import SwiftyVK
+
+
 
 var GroupList: [Int: Group] = [:]
 
@@ -17,7 +18,7 @@ class Group {
 	var name: String
 	var position: GroupManagementPosition
 
-	init(id: Int, name: String, admin_level: Int) {//кажется, тут придётся расписывать все параметры
+	init(id: Int, name: String, admin_level: Int) {
 		self.id = id
 		self.name = name
 		self.position = GroupManagementPosition(position: admin_level)
@@ -25,21 +26,6 @@ class Group {
 
 	class func LoadGroupData(){
 		GroupList = [:]
-		VK.API.Groups.get([
-			VK.Arg.extended: "1",
-			VK.Arg.fields: "is_admin,admin_level"
-		]).send(
-			onSuccess: {response in
-				let groupList = response["items"].arrayValue
-				for group in groupList {
-					if group["is_admin"].intValue == 1 {
-						GroupList[group["id"].intValue] = Group(id: group["id"].intValue, name: group["name"].stringValue, admin_level: group["admin_level"].intValue)
-					}
-				}
-				//go to next screen
-			},
-			
-			onError: {error in print("error")}
-		)
+		
 	}
 }

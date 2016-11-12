@@ -7,15 +7,16 @@
 //
 
 import UIKit
-import SwiftyVK
 
 class GroupListTableViewController: UITableViewController {
+
 	@IBOutlet var GroupListTable: UITableView!
 
 	@IBOutlet weak var logOutButton: UIButton!
+
 	@IBAction func LogOutButtonPressed(_ sender: Any) {
-		VK.logOut()
 	}
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,23 +36,21 @@ class GroupListTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+		return GroupList.count+1
+        //return 0
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+		let cell = tableView.dequeueReusableCell(withIdentifier: "GroupListCell", for: indexPath)
+		// Configure the cell...
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

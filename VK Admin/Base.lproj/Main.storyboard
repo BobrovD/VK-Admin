@@ -19,18 +19,18 @@
                         <viewControllerLayoutGuide type="bottom" id="8zI-4Q-vbD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1hD-xh-5jt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vkwa.png" translatesAutoresizingMaskIntoConstraints="NO" id="zLO-Ff-Y1I">
-                                <rect key="frame" x="16" y="20" width="288" height="147.5"/>
+                                <rect key="frame" x="16" y="0.0" width="288" height="136"/>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Xdh-qV-LFs" userLabel="CheckAuth Activity Indicator">
-                                <rect key="frame" x="150" y="230" width="20" height="20"/>
+                                <rect key="frame" x="150" y="198" width="20" height="20"/>
                                 <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4l-aF-7RX">
-                                <rect key="frame" x="16" y="213.5" width="288" height="53"/>
+                                <rect key="frame" x="16" y="182" width="288" height="53"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                 <state key="normal" title="Войти">
                                     <color key="titleColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -46,8 +46,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="blabla:" destination="f8R-Xs-CY2" eventType="touchUpInside" id="lkD-av-dPQ"/>
-                                    <segue destination="JRI-Wd-HdK" kind="show" id="ptn-R5-6wN"/>
+                                    <segue destination="JRI-Wd-HdK" kind="show" id="p2h-1T-9YU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -70,7 +69,6 @@
                         <outlet property="AuthButton" destination="s4l-aF-7RX" id="HQw-gy-kj1"/>
                         <outlet property="CheckAuthIndicator" destination="Xdh-qV-LFs" id="ne8-kr-NjM"/>
                         <outlet property="tmpButtonToShowNextScreen" destination="FpL-9o-Wq3" id="67J-Cd-TbT"/>
-                        <segue destination="JRI-Wd-HdK" kind="show" identifier="AuthSuccessSegue" id="KKn-He-sur"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alb-M0-zEz" sceneMemberID="firstResponder"/>
@@ -86,36 +84,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="uVM-99-Ouc" detailTextLabel="52k-1x-D58" style="IBUITableViewCellStyleSubtitle" id="cVm-g6-0QR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GroupListCell" textLabel="uVM-99-Ouc" detailTextLabel="52k-1x-D58" style="IBUITableViewCellStyleSubtitle" id="cVm-g6-0QR">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cVm-g6-0QR" id="FDu-di-xhf">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uVM-99-Ouc">
-                                            <rect key="frame" x="15" y="4" width="34" height="21"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="iOS@VKU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uVM-99-Ouc">
+                                            <rect key="frame" x="15" y="4" width="77" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="52k-1x-D58">
-                                            <rect key="frame" x="15" y="25" width="44" height="15"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Модератор" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="52k-1x-D58">
+                                            <rect key="frame" x="15" y="25" width="67" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="+2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AB4-Vk-Rmc" userLabel="Messages">
+                                            <rect key="frame" x="228" y="11" width="58" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lFp-Sb-Tbq">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupListCreate" id="lFp-Sb-Tbq">
                                 <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lFp-Sb-Tbq" id="aeC-Kj-qV5">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeW-ya-KWo">
+                                            <rect key="frame" x="113" y="6" width="94" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Создать">
+                                                <color key="titleColor" red="0.34134027360000002" green="0.51406812670000002" blue="0.70486295219999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Y7Z-Kd-0Hh">
@@ -145,16 +159,18 @@
                                     <action selector="LogOutButtonPressed:" destination="2LK-iP-BqH" eventType="touchUpInside" id="14H-3V-4fN"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <segue destination="f8R-Xs-CY2" kind="show" id="u5j-1H-0JM"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="GroupListTable" destination="z8C-m3-pY5" id="kRW-jr-nJl"/>
-                        <outlet property="LogOutButton" destination="1TR-OY-7r8" id="mK9-aN-vH7"/>
+                        <outlet property="GroupListTable" destination="z8C-m3-pY5" id="lM2-ab-6jW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjf-7v-OMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2057" y="36"/>
+            <point key="canvasLocation" x="2056.875" y="35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kl8-bR-bXd">
@@ -182,7 +198,4 @@
     <resources>
         <image name="vkwa.png" width="1024" height="1024"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="KKn-He-sur"/>
-    </inferredMetricsTieBreakers>
 </document>
