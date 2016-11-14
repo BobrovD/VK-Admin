@@ -18,7 +18,6 @@
 		C204B9FC1DD1835E009E06E8 /* GroupDialogsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9EA1DD1835D009E06E8 /* GroupDialogsNetwork.swift */; };
 		C204B9FD1DD1835E009E06E8 /* GroupNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9EB1DD1835D009E06E8 /* GroupNetwork.swift */; };
 		C204B9FE1DD1835E009E06E8 /* GroupManagementNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9EC1DD1835D009E06E8 /* GroupManagementNetwork.swift */; };
-		C204B9FF1DD1835E009E06E8 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9ED1DD1835D009E06E8 /* Defaults.swift */; };
 		C204BA001DD1835E009E06E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9EE1DD1835D009E06E8 /* User.swift */; };
 		C204BA011DD1835E009E06E8 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9EF1DD1835D009E06E8 /* Group.swift */; };
 		C204BA021DD1835E009E06E8 /* GroupSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204B9F01DD1835E009E06E8 /* GroupSubject.swift */; };
@@ -32,12 +31,15 @@
 		C204BA121DD18377009E06E8 /* vkba_150.png in Resources */ = {isa = PBXBuildFile; fileRef = C204BA0B1DD18377009E06E8 /* vkba_150.png */; };
 		C204BA131DD18377009E06E8 /* vkw.png in Resources */ = {isa = PBXBuildFile; fileRef = C204BA0C1DD18377009E06E8 /* vkw.png */; };
 		C204BA141DD18377009E06E8 /* vkwa.png in Resources */ = {isa = PBXBuildFile; fileRef = C204BA0D1DD18377009E06E8 /* vkwa.png */; };
+		C21AE0081DD9C25900E633C3 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21AE0071DD9C25900E633C3 /* Helper.swift */; };
 		C222B4EA1DD0FD7100F0B87C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C222B4E91DD0FD7100F0B87C /* AppDelegate.swift */; };
 		C222B4EC1DD0FD7100F0B87C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C222B4EB1DD0FD7100F0B87C /* WelcomeViewController.swift */; };
 		C222B4EF1DD0FD7100F0B87C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C222B4ED1DD0FD7100F0B87C /* Main.storyboard */; };
 		C222B4F11DD0FD7100F0B87C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C222B4F01DD0FD7100F0B87C /* Assets.xcassets */; };
 		C222B4F41DD0FD7100F0B87C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C222B4F21DD0FD7100F0B87C /* LaunchScreen.storyboard */; };
 		C22B1F2B1DD5053D00706800 /* GroupListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B1F2A1DD5053D00706800 /* GroupListTableViewController.swift */; };
+		C2473BE31DD84DBF00C5C503 /* Authorizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2473BE21DD84DBF00C5C503 /* Authorizator.swift */; };
+		C2473BE51DD84E5400C5C503 /* VKRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2473BE41DD84E5400C5C503 /* VKRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +54,6 @@
 		C204B9EA1DD1835D009E06E8 /* GroupDialogsNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDialogsNetwork.swift; sourceTree = "<group>"; };
 		C204B9EB1DD1835D009E06E8 /* GroupNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupNetwork.swift; sourceTree = "<group>"; };
 		C204B9EC1DD1835D009E06E8 /* GroupManagementNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupManagementNetwork.swift; sourceTree = "<group>"; };
-		C204B9ED1DD1835D009E06E8 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		C204B9EE1DD1835D009E06E8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C204B9EF1DD1835D009E06E8 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		C204B9F01DD1835E009E06E8 /* GroupSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSubject.swift; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 		C204BA0B1DD18377009E06E8 /* vkba_150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vkba_150.png; sourceTree = "<group>"; };
 		C204BA0C1DD18377009E06E8 /* vkw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vkw.png; sourceTree = "<group>"; };
 		C204BA0D1DD18377009E06E8 /* vkwa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vkwa.png; sourceTree = "<group>"; };
+		C21AE0071DD9C25900E633C3 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		C222B4E61DD0FD7100F0B87C /* VK Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C222B4E91DD0FD7100F0B87C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C222B4EB1DD0FD7100F0B87C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,8 @@
 		C222B4F31DD0FD7100F0B87C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C222B4F51DD0FD7100F0B87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C22B1F2A1DD5053D00706800 /* GroupListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListTableViewController.swift; sourceTree = "<group>"; };
+		C2473BE21DD84DBF00C5C503 /* Authorizator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorizator.swift; sourceTree = "<group>"; };
+		C2473BE41DD84E5400C5C503 /* VKRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +121,9 @@
 			children = (
 				C204B9E91DD1835D009E06E8 /* App.swift */,
 				C204B9E51DD1835D009E06E8 /* AppUser.swift */,
-				C204B9ED1DD1835D009E06E8 /* Defaults.swift */,
+				C2473BE21DD84DBF00C5C503 /* Authorizator.swift */,
+				C21AE0071DD9C25900E633C3 /* Helper.swift */,
+				C2473BE41DD84E5400C5C503 /* VKRequest.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -270,7 +276,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C222B4EC1DD0FD7100F0B87C /* WelcomeViewController.swift in Sources */,
-				C204B9FF1DD1835E009E06E8 /* Defaults.swift in Sources */,
 				C204B9F51DD1835E009E06E8 /* GroupDialogsMessage.swift in Sources */,
 				C204BA021DD1835E009E06E8 /* GroupSubject.swift in Sources */,
 				C204BA011DD1835E009E06E8 /* Group.swift in Sources */,
@@ -280,7 +285,9 @@
 				C204B9FD1DD1835E009E06E8 /* GroupNetwork.swift in Sources */,
 				C204B9FC1DD1835E009E06E8 /* GroupDialogsNetwork.swift in Sources */,
 				C222B4EA1DD0FD7100F0B87C /* AppDelegate.swift in Sources */,
+				C2473BE31DD84DBF00C5C503 /* Authorizator.swift in Sources */,
 				C204BA001DD1835E009E06E8 /* User.swift in Sources */,
+				C2473BE51DD84E5400C5C503 /* VKRequest.swift in Sources */,
 				C204B9F41DD1835E009E06E8 /* GroupMemberList.swift in Sources */,
 				C204B9F71DD1835E009E06E8 /* AppUser.swift in Sources */,
 				C204BA031DD1835E009E06E8 /* GroupDialogsList.swift in Sources */,
@@ -288,6 +295,7 @@
 				C204B9F61DD1835E009E06E8 /* GroupDialogsUser.swift in Sources */,
 				C204B9FE1DD1835E009E06E8 /* GroupManagementNetwork.swift in Sources */,
 				C204BA041DD1835E009E06E8 /* GroupDialogs.swift in Sources */,
+				C21AE0081DD9C25900E633C3 /* Helper.swift in Sources */,
 				C204B9FA1DD1835E009E06E8 /* GroupManagementPosition.swift in Sources */,
 				C204B9F81DD1835E009E06E8 /* GroupManagementUser.swift in Sources */,
 			);

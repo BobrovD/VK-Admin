@@ -10,12 +10,23 @@ import Foundation
 
 
 class Application{
-	var authorized: Bool
-	var user: ApplicationUser
+	public var authorized: Bool
+	public var user: ApplicationUser
+
+	public var userToken: String?
+	public var groupToken: String?
 
 	init(){
 		self.authorized = false
 		self.user = ApplicationUser()
+	}
+
+	public func SaveToken(token: String){
+		if self.userToken == nil {
+			self.userToken = token
+		} else {
+			self.groupToken = token
+		}
 	}
 }
 

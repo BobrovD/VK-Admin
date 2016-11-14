@@ -16,10 +16,6 @@ class ApplicationUser{
 	init(){}
 
 	func LoadUser(){
-	
-	}
-
-	func GetImplicitFlow(){
 		
 	}
 }
