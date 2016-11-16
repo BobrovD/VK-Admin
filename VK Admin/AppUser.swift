@@ -10,12 +10,18 @@ import Foundation
 
 class ApplicationUser{
 	var id: Int?
-	var name: String?
+	var name: String? {
+		didSet {
+			Group.LoadGroupList()
+		}
+	}
 	var avatar: String?
 
 	init(){}
 
 	func LoadUser(){
-		
+		VK.SendUserRequest(method: "users.get", parametrs: [:], callback: {response in
+			self.name = "123"
+		})
 	}
 }

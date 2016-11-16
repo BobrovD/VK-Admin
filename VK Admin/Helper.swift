@@ -10,8 +10,20 @@ import Foundation
 
 class CHelper {
 
-	public func getGetParametrsFromUrl(url: String?) -> [String: String] {
+	public func getGetParametrsFromUrlByH(url: String?) -> [String: String]{
 		let urlArr = url?.characters.split{$0 == "#"}.map(String.init)
+		return self.getGetParametrsFromUrl(urlArr: urlArr)
+	}
+
+	public func getGetParametrsFromUrlByQ(url: String?) -> [String: String]{
+		let urlArr = url?.characters.split{$0 == "?"}.map(String.init)
+		return self.getGetParametrsFromUrl(urlArr: urlArr)
+	}
+
+	private func getGetParametrsFromUrl(urlArr: [String]?) -> [String: String] {
+		if (urlArr?.count)! < 2 {
+			return [:]
+		}
 		let paramPairsArr = urlArr?[1].characters.split{$0 == "&"}.map(String.init)
 		var result: [String: String] = [:]
 		for val in paramPairsArr! {
@@ -31,6 +43,7 @@ class CHelper {
 			}
 			i -= 1
 		}
+
 		return result
 	}
 }

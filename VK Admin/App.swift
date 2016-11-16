@@ -13,20 +13,25 @@ class Application{
 	public var authorized: Bool
 	public var user: ApplicationUser
 
-	public var userToken: String?
-	public var groupToken: String?
+	public var userToken: String? {
+		get {
+//			if let
+			return ""
+		}
+		set{
+		}
+	}
+	public var groupToken: String? {
+		get {
+			return ""
+		}
+		set{
+		}
+	}
 
 	init(){
 		self.authorized = false
 		self.user = ApplicationUser()
-	}
-
-	public func SaveToken(token: String){
-		if self.userToken == nil {
-			self.userToken = token
-		} else {
-			self.groupToken = token
-		}
 	}
 }
 
