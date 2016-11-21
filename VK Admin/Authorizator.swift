@@ -73,17 +73,15 @@ class VKAuthorizator {
 		App.userToken = ""
 	}
 
-	private func CheckAuthorization() -> Bool {
-		//user get with token
-		return false
-	}
-
 	private func LoadLocalAuthData () -> Bool {
+		if App.userToken != "" && App.groupToken != "" {
+			return true
+		}
 		return false
 	}
 
 	public func PrimaryAuth() -> Bool {
-		if self.LoadLocalAuthData() && self.CheckAuthorization() {
+		if self.LoadLocalAuthData(){
 			print("use local data")
 			Group.LoadGroupList()
 			return true
@@ -200,7 +198,7 @@ class VKAuthorizator {
 						case "error" :
 							Authorizator.authError = value
 							App.authorized = false
-							App.userToken = nil
+							App.userToken = ""
 						case "error_description" :
 							Authorizator.authErrorText = value
 						default:
@@ -215,6 +213,7 @@ class VKAuthorizator {
 							Authorizator.authError = ""
 							Authorizator.authErrorText = ""
 						case "error" :
+							App.groupToken = ""
 							Authorizator.authError = value
 							App.authorized = false
 						case "error_description" :

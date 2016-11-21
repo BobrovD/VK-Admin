@@ -46,7 +46,15 @@ class GroupListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "GroupListCell", for: indexPath)
+		let cell: UITableViewCell
+		let curIndex: Int = indexPath.row
+		if curIndex - GroupList.count == 0 {
+			cell = tableView.dequeueReusableCell(withIdentifier: "GroupListCell", for: indexPath)
+			cell.detailTextLabel?.text = GroupList[curIndex]?.position.name
+			cell.textLabel?.text = GroupList[curIndex]?.name
+		} else {
+			cell = tableView.dequeueReusableCell(withIdentifier: "GroupListCreate", for: indexPath)
+		}
 		// Configure the cell...
         return cell
     }

@@ -7,27 +7,45 @@
 //
 
 import Foundation
-
+import KeychainSwift
 
 class Application{
 	public var authorized: Bool
 	public var user: ApplicationUser
 
-	public var userToken: String? {
+	public var userToken: String = ""
+	/*{
 		get {
-//			if let
-			return ""
+			if let uT = keychain.get("user_token") {
+				return uT
+			} else {
+				return ""
+			}
 		}
-		set{
+		set(uT){
+			print("set: \(uT)")
+			if (keychain.set(uT, forKey: "user_token")) {
+				print("setted success")
+			} else {
+				print(keychain.lastResultCode)
+			}
+			print("setted: \(keychain.get("user_token"))")
+		}
+	}*/
+	public var groupToken: String = ""
+	/*{
+		get {
+			if let gT = keychain.get("group_token") {
+				return gT
+			} else {
+				return ""
+			}
+		}
+		set(gT){
+			keychain.set(gT, forKey: "group_token")
 		}
 	}
-	public var groupToken: String? {
-		get {
-			return ""
-		}
-		set{
-		}
-	}
+	*/
 
 	init(){
 		self.authorized = false
@@ -36,3 +54,5 @@ class Application{
 }
 
 let App = Application()
+
+var keychain: KeychainSwift = KeychainSwift()

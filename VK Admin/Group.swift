@@ -36,7 +36,9 @@ class Group {
 					gString.append(g["id"].stringValue)
 				}
 				Authorizator.setGroupList(groups: gString)
-				Authorizator.AuthWebView?.loadRequest(Authorizator.getGroupRequest())
+//				if App.groupToken == "" {
+					Authorizator.AuthWebView?.loadRequest(Authorizator.getGroupRequest())
+//				}
 		})
 	}
 }
