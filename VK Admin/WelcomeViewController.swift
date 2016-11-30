@@ -28,9 +28,9 @@ class WelcomeViewController: UIViewController, UIWebViewDelegate {
 
 		self.AuthWebView.delegate = self
 
-		Authorizator.AuthWebView = self.AuthWebView
+		Authorizator.instance.AuthWebView = self.AuthWebView
 
-		if !Authorizator.PrimaryAuth() {
+		if !Authorizator.instance.PrimaryAuth() {
 			self.AuthButton.isHidden = false
 			self.ActivityIndicator.isHidden = true
 		}
@@ -45,17 +45,20 @@ class WelcomeViewController: UIViewController, UIWebViewDelegate {
 	@IBAction func AuthButtonPressed(_ sender: UIButton) {
 		self.ActivityIndicator.isHidden = false
 		self.AuthButton.isHidden = true
-		self.AuthWebView.loadRequest(Authorizator.getUserRequest())
+		self.AuthWebView.loadRequest(Authorizator.instance.getUserTokenRequest())
 	}
 
 	func webViewDidFinishLoad(_ webView: UIWebView) {
 		self.ActivityIndicator.isHidden = true
-		Authorizator.ProcessAuthWebView(controller: self, labels: [AuthFailedLabel, AuthFailedTextLabel, WebViewTitleLabel], buttons: [AuthButton], aIndicators: [ActivityIndicator])
+		Authorizator.instance.ProcessAuthWebView(controller: self, labels: [AuthFailedLabel, AuthFailedTextLabel, WebViewTitleLabel], buttons: [AuthButton], aIndicators: [ActivityIndicator])
 	}
 
 	func webViewDidStartLoad(_ webView: UIWebView) {
 		ActivityIndicator.isHidden = false
-		//ActivityIndicator.startAnimating() //надо ли его вообще останавливать?
+	}
+
+	func goToNextScreen() {
+		self.performSegue(withIdentifier: "AuthSuccessSegue", sender: self)
 	}
 
 }

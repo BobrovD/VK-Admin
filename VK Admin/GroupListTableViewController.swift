@@ -46,18 +46,24 @@ class GroupListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell: UITableViewCell
+		let cell: SubtitleCustomTableViewCell
 		let curIndex: Int = indexPath.row
 		if curIndex - GroupList.count == 0 {
-			cell = tableView.dequeueReusableCell(withIdentifier: "GroupListCell", for: indexPath)
-			cell.detailTextLabel?.text = GroupList[curIndex]?.position.name
-			cell.textLabel?.text = GroupList[curIndex]?.name
+			cell = tableView.dequeueReusableCell(withIdentifier: "GroupListCell", for: indexPath) as! SubtitleCustomTableViewCell
+			cell.TitleLabel.text = GroupList[curIndex]?.position.name
+			cell.SubtitleLabel.text = GroupList[curIndex]?.name
+			cell.MessagesLabel.text = String(describing: GroupList[curIndex]?.newMessages)
 		} else {
-			cell = tableView.dequeueReusableCell(withIdentifier: "GroupListCreate", for: indexPath)
+			cell = tableView.dequeueReusableCell(withIdentifier: "GroupListCreate", for: indexPath) as! SubtitleCustomTableViewCell
 		}
-		// Configure the cell...
         return cell
     }
+
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let rowId = indexPath.row
+		SelectedGroup = GroupList[rowId]
+		performSegue(withIdentifier: "OpenGroupSegue", sender: self)
+	}
 
 
     /*

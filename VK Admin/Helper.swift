@@ -8,7 +8,9 @@
 
 import Foundation
 
-class CHelper {
+class Helper {
+
+	static var instance = Helper()
 
 	public func getGetParametrsFromUrlByH(url: String?) -> [String: String]{
 		let urlArr = url?.characters.split{$0 == "#"}.map(String.init)
@@ -46,6 +48,9 @@ class CHelper {
 
 		return result
 	}
-}
 
-let Helper = CHelper()
+	public func getGroupIdFromString (string: String) -> Int {
+		let stringArr = string.characters.split{$0 == "_"}.map(String.init)
+		return Int(stringArr[2])!
+	}
+}

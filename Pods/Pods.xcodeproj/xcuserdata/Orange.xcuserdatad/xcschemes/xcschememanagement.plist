@@ -9,15 +9,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>KeychainSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<true/>
-		</dict>
 		<key>Pods-VK Admin.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+		</dict>
+		<key>SQLite.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
@@ -27,12 +27,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>38ACA430605AFB4229712A18BDDF5086</key>
+		<key>5D1E20239C5C824911E899C7E1D6A840</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5E94DDB4AEA6962F7279A2EFAA716BB6</key>
+		<key>7D28BECAB2C6521C243592003CA839A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DB63C12446CABEF158A1353A727974EF</key>
+		<key>8D20EABF6822274D591637EBF1ED01BD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
