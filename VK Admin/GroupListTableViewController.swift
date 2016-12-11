@@ -15,11 +15,18 @@ class GroupListTableViewController: UITableViewController {
 	@IBOutlet weak var logOutButton: UIButton!
 
 	@IBAction func LogOutButtonPressed(_ sender: Any) {
+		Authorizator.instance.clearAuthData()
+		performSegue(withIdentifier: "logOutSegue", sender: self)
 	}
+
+	var groups: [Int: Group] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
+		groups = Group.getGroupArray()
+		
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -46,16 +53,26 @@ class GroupListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell: SubtitleCustomTableViewCell
 		let curIndex: Int = indexPath.row
-		if curIndex - GroupList.count == 0 {
-			cell = tableView.dequeueReusableCell(withIdentifier: "GroupListCell", for: indexPath) as! SubtitleCustomTableViewCell
-			cell.TitleLabel.text = GroupList[curIndex]?.position.name
-			cell.SubtitleLabel.text = GroupList[curIndex]?.name
-			cell.MessagesLabel.text = String(describing: GroupList[curIndex]?.newMessages)
+		if GroupList.count - curIndex > 0 {
+			//let cell: GroupListCell
+			//cell = tableView.dequeueReusableCell(withIdentifier: "GroupListCell", for: indexPath) as! GroupListCell
+			let cell = Bundle.main.loadNibNamed("GroupListCell", owner: self, options: nil)?.first as! GroupListCell
+			cell.titleLabel.text = self.groups[curIndex]?.name
+			cell.subtitleLabel.text = self.groups[curIndex]?.position.name
+			if self.groups[curIndex]?.newMessages != 0 {
+				cell.messagesLabel.text = "+ " + String(describing: self.groups[curIndex]!.newMessages)
+			} else {
+				cell.messagesLabel.text = ""
+			}
+			return cell
 		} else {
-			cell = tableView.dequeueReusableCell(withIdentifier: "GroupListCreate", for: indexPath) as! SubtitleCustomTableViewCell
+			//let cell: GroupListCreateGroupCell
+			//cell = tableView.dequeueReusableCell(withIdentifier: "GroupListCreateGroupCell", for: indexPath) as! GroupListCreateGroupCell
+			let cell = Bundle.main.loadNibNamed("GroupListCreateGroupCell", owner: self, options: nil)?.first as! GroupListCreateGroupCell
+			return cell
 		}
+		let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
         return cell
     }
 

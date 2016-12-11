@@ -17,7 +17,7 @@ class VK {
 	private let vkApiBaseUrl = "https://api.vk.com/method/"
 	private let vkApiVersion = "5.60"
 
-	public func SendRequest(method: String, parametrs: [String: String], callback: @escaping (_ response: JSON?) -> Void){
+	public func sendRequest(method: String, parametrs: [String: String], callback: @escaping (_ response: JSON?) -> Void){
 		let urlParams = Helper.instance.getUrlStringFromDic(dic: parametrs)
 		let url = self.vkApiBaseUrl + method + "?" + urlParams + "&v=" + self.vkApiVersion
 		Alamofire.request(url).responseJSON { response in

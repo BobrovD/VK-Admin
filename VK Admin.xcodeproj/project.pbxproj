@@ -32,6 +32,8 @@
 		C204BA121DD18377009E06E8 /* vkba_150.png in Resources */ = {isa = PBXBuildFile; fileRef = C204BA0B1DD18377009E06E8 /* vkba_150.png */; };
 		C204BA131DD18377009E06E8 /* vkw.png in Resources */ = {isa = PBXBuildFile; fileRef = C204BA0C1DD18377009E06E8 /* vkw.png */; };
 		C204BA141DD18377009E06E8 /* vkwa.png in Resources */ = {isa = PBXBuildFile; fileRef = C204BA0D1DD18377009E06E8 /* vkwa.png */; };
+		C21504041DF251E40010B37A /* GroupListCreateGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21504021DF251E40010B37A /* GroupListCreateGroupCell.swift */; };
+		C21504051DF251E40010B37A /* GroupListCreateGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21504031DF251E40010B37A /* GroupListCreateGroupCell.xib */; };
 		C21AE0081DD9C25900E633C3 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21AE0071DD9C25900E633C3 /* Helper.swift */; };
 		C222B4EA1DD0FD7100F0B87C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C222B4E91DD0FD7100F0B87C /* AppDelegate.swift */; };
 		C222B4EC1DD0FD7100F0B87C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C222B4EB1DD0FD7100F0B87C /* WelcomeViewController.swift */; };
@@ -39,8 +41,8 @@
 		C222B4F11DD0FD7100F0B87C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C222B4F01DD0FD7100F0B87C /* Assets.xcassets */; };
 		C222B4F41DD0FD7100F0B87C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C222B4F21DD0FD7100F0B87C /* LaunchScreen.storyboard */; };
 		C22B1F2B1DD5053D00706800 /* GroupListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B1F2A1DD5053D00706800 /* GroupListTableViewController.swift */; };
-		C23A879D1DE368A8003A64E2 /* SubtitleCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A879B1DE368A8003A64E2 /* SubtitleCustomTableViewCell.swift */; };
-		C23A879E1DE368A8003A64E2 /* SubtitleCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23A879C1DE368A8003A64E2 /* SubtitleCustomTableViewCell.xib */; };
+		C23A879D1DE368A8003A64E2 /* GroupListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A879B1DE368A8003A64E2 /* GroupListCell.swift */; };
+		C23A879E1DE368A8003A64E2 /* GroupListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23A879C1DE368A8003A64E2 /* GroupListCell.xib */; };
 		C23A87A21DE3AAC5003A64E2 /* SQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A87A11DE3AAC5003A64E2 /* SQLite.swift */; };
 		C23A87A41DE3ABF5003A64E2 /* VK-Admin.db in Resources */ = {isa = PBXBuildFile; fileRef = C23A87A31DE3ABF5003A64E2 /* VK-Admin.db */; };
 		C2473BE31DD84DBF00C5C503 /* Authorizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2473BE21DD84DBF00C5C503 /* Authorizator.swift */; };
@@ -89,6 +91,8 @@
 		C204BA0C1DD18377009E06E8 /* vkw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vkw.png; sourceTree = "<group>"; };
 		C204BA0D1DD18377009E06E8 /* vkwa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vkwa.png; sourceTree = "<group>"; };
 		C20C6970FB169B7E344442E2 /* Pods_VK_Admin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK_Admin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C21504021DF251E40010B37A /* GroupListCreateGroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListCreateGroupCell.swift; sourceTree = "<group>"; };
+		C21504031DF251E40010B37A /* GroupListCreateGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupListCreateGroupCell.xib; sourceTree = "<group>"; };
 		C21AE0071DD9C25900E633C3 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		C222B4E61DD0FD7100F0B87C /* VK Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C222B4E91DD0FD7100F0B87C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,8 +102,8 @@
 		C222B4F31DD0FD7100F0B87C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C222B4F51DD0FD7100F0B87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C22B1F2A1DD5053D00706800 /* GroupListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListTableViewController.swift; sourceTree = "<group>"; };
-		C23A879B1DE368A8003A64E2 /* SubtitleCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleCustomTableViewCell.swift; sourceTree = "<group>"; };
-		C23A879C1DE368A8003A64E2 /* SubtitleCustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubtitleCustomTableViewCell.xib; sourceTree = "<group>"; };
+		C23A879B1DE368A8003A64E2 /* GroupListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListCell.swift; sourceTree = "<group>"; };
+		C23A879C1DE368A8003A64E2 /* GroupListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupListCell.xib; sourceTree = "<group>"; };
 		C23A87A11DE3AAC5003A64E2 /* SQLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLite.swift; sourceTree = "<group>"; };
 		C23A87A31DE3ABF5003A64E2 /* VK-Admin.db */ = {isa = PBXFileReference; lastKnownFileType = text; path = "VK-Admin.db"; sourceTree = "<group>"; };
 		C2473BE21DD84DBF00C5C503 /* Authorizator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorizator.swift; sourceTree = "<group>"; };
@@ -201,7 +205,8 @@
 		C204BA191DD2130E009E06E8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C23A879B1DE368A8003A64E2 /* SubtitleCustomTableViewCell.swift */,
+				C23A879B1DE368A8003A64E2 /* GroupListCell.swift */,
+				C21504021DF251E40010B37A /* GroupListCreateGroupCell.swift */,
 				C222B4EB1DD0FD7100F0B87C /* WelcomeViewController.swift */,
 				C22B1F2A1DD5053D00706800 /* GroupListTableViewController.swift */,
 				C2CB2B9D1DEF1FEC00D88DCB /* ShowGroupViewController.swift */,
@@ -251,7 +256,8 @@
 		C2527BE81DE8955600A11604 /* xib */ = {
 			isa = PBXGroup;
 			children = (
-				C23A879C1DE368A8003A64E2 /* SubtitleCustomTableViewCell.xib */,
+				C23A879C1DE368A8003A64E2 /* GroupListCell.xib */,
+				C21504031DF251E40010B37A /* GroupListCreateGroupCell.xib */,
 			);
 			name = xib;
 			sourceTree = "<group>";
@@ -319,8 +325,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C21504051DF251E40010B37A /* GroupListCreateGroupCell.xib in Resources */,
 				C23A87A41DE3ABF5003A64E2 /* VK-Admin.db in Resources */,
-				C23A879E1DE368A8003A64E2 /* SubtitleCustomTableViewCell.xib in Resources */,
+				C23A879E1DE368A8003A64E2 /* GroupListCell.xib in Resources */,
 				C204BA131DD18377009E06E8 /* vkw.png in Resources */,
 				C204BA121DD18377009E06E8 /* vkba_150.png in Resources */,
 				C222B4F41DD0FD7100F0B87C /* LaunchScreen.storyboard in Resources */,
@@ -391,7 +398,7 @@
 			files = (
 				C222B4EC1DD0FD7100F0B87C /* WelcomeViewController.swift in Sources */,
 				C204B9F51DD1835E009E06E8 /* GroupDialogsMessage.swift in Sources */,
-				C23A879D1DE368A8003A64E2 /* SubtitleCustomTableViewCell.swift in Sources */,
+				C23A879D1DE368A8003A64E2 /* GroupListCell.swift in Sources */,
 				C204BA021DD1835E009E06E8 /* GroupSubject.swift in Sources */,
 				C204BA011DD1835E009E06E8 /* Group.swift in Sources */,
 				C204BA051DD1835E009E06E8 /* GroupData.swift in Sources */,
@@ -404,6 +411,7 @@
 				C23A87A21DE3AAC5003A64E2 /* SQLite.swift in Sources */,
 				C2473BE31DD84DBF00C5C503 /* Authorizator.swift in Sources */,
 				C204BA001DD1835E009E06E8 /* User.swift in Sources */,
+				C21504041DF251E40010B37A /* GroupListCreateGroupCell.swift in Sources */,
 				C2473BE51DD84E5400C5C503 /* VKRequest.swift in Sources */,
 				C204B9F41DD1835E009E06E8 /* GroupMemberList.swift in Sources */,
 				C204B9F71DD1835E009E06E8 /* AppUser.swift in Sources */,
@@ -458,6 +466,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -508,6 +517,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -537,6 +547,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 370D98DCA04265764450BB25 /* Pods-VK Admin.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "VK Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -551,6 +562,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 860AFE06A04DE10D999E14DE /* Pods-VK Admin.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "VK Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -17,9 +17,11 @@ class Authorizator {
 	var authError = ""
 	var authErrorText = ""
 
-	var AuthWebView: UIWebView?
+	var authWebView: UIWebView?
 
 	let vkAppId = "5698005"
+
+	var callback: (()->())?
 
 	private var parametrTokenGroups: [String: String] = [
 		"client_id" : "5698005",
@@ -67,15 +69,19 @@ class Authorizator {
 		return (self.parametrTokenGroups["redirect_uri"]?.characters.count)!
 	}
 
-	private func clearAuthData() {
+	public func clearAuthData() {
 		self.authError = ""
 		self.authErrorText = ""
 		Application.instance.authorized = false
+		Application.instance.user.deleteUserFromDB()
 		Application.instance.user.token = ""
+		Application.instance.user.id = 0
+		Application.instance.user.name = ""
+		Application.instance.user.avatar = ""
+		GroupList = [:]
 	}
 
-	private func LoadLocalAuthData () -> Bool {
-		return false
+	private func loadLocalAuthData () -> Bool {
 		if let user = SQLite.instance.getLastUser() {
 			Application.instance.user = user
 		}
@@ -85,25 +91,27 @@ class Authorizator {
 		return false
 	}
 
-	public func PrimaryAuth() -> Bool {
-		if self.LoadLocalAuthData(){
-			print("use local data")
-			Application.instance.user.LoadUser()
-			return true
+	public func primaryAuth( ) -> () {
+		if self.loadLocalAuthData() {
+			print("try to use local data")
+			Application.instance.user.loadUserFromVK() {
+				Group.loadGroupListFromVK() {
+					Authorizator.instance.authWebView?.loadRequest(Authorizator.instance.getGroupsTokenRequest())
+				}
+			}
+		} else {
+			Authorizator.instance.authWebView?.loadRequest(Authorizator.instance.getUserTokenRequest())
 		}
-		return false
 	}
 
-	public func ProcessAuthWebView(controller: UIViewController, labels: [UILabel], buttons: [UIButton], aIndicators: [UIActivityIndicatorView]) {
+	public func processAuthWebView(controller: UIViewController, labels: [UILabel], buttons: [UIButton], aIndicators: [UIActivityIndicatorView]) {
 
 		/*
 			page loaded
 		*/
 
-		let curUrl = self.AuthWebView?.request?.url?.absoluteString
-		let curPath = self.AuthWebView?.request?.url?.path
-
-//		print(curUrl)
+		let curUrl = self.authWebView?.request?.url?.absoluteString
+		let curPath = self.authWebView?.request?.url?.path
 
 		switch curPath! {
 			case "/blank.html" :
@@ -112,43 +120,49 @@ class Authorizator {
 					loaded answer page
 				*/
 
-				self.AuthWebView?.isHidden = true
+				self.authWebView?.isHidden = true
 
-				self.UpdateLabel(label: labels[0], text: "", isHidden: true)
-				self.UpdateLabel(label: labels[1], text: "", isHidden: true)
-				self.UpdateLabel(label: labels[2], text: "", isHidden: true)
+				self.updateLabel(label: labels[0], text: "", isHidden: true)
+				self.updateLabel(label: labels[1], text: "", isHidden: true)
+				self.updateLabel(label: labels[2], text: "", isHidden: true)
 
 				if (curUrl?.contains("state=user"))! {
 					print("blank_user")
-					self.ProcessingAuthUrlVars(
+					self.processingAuthUrlVars(
 						type: "blank_user",
 						data: Helper.instance.getGetParametrsFromUrlByH(url: curUrl)
 					)
 					if Application.instance.user.token != "" {
 						aIndicators[0].isHidden = false
-						Application.instance.user.LoadUser()
+						Application.instance.user.loadUserFromVK(){
+							Application.instance.user.saveUserToDB()
+							Group.loadGroupListFromVK() {
+								Authorizator.instance.authWebView?.loadRequest(
+									Authorizator.instance.getGroupsTokenRequest()
+								)
+							}
+						}
 					} else {
 						buttons[0].isHidden = false
 						self.clearAuthData()
-						self.UpdateLabel(label: labels[0], text: Authorizator.instance.authError, isHidden: false)
-						self.UpdateLabel(label: labels[1], text: Authorizator.instance.authErrorText, isHidden: false)
+						self.updateLabel(label: labels[0], text: Authorizator.instance.authError, isHidden: false)
+						self.updateLabel(label: labels[1], text: Authorizator.instance.authErrorText, isHidden: false)
 					}
 				} else if (curUrl?.contains("state=group"))! {
 					print("blank_group")
-					self.ProcessingAuthUrlVars(
+					self.processingAuthUrlVars(
 						type: "blank_group",
 						data: Helper.instance.getGetParametrsFromUrlByH(url: curUrl)
 					)
 					if Application.instance.user.token != "" {
-						//go to segue
-						//Application.instance.user.ShowUser()
-						Application.instance.user.SaveUserToDB()
-						Group.LoadUnansweredMessages()
+						Group.loadUnansweredMessages(){
+							Authorizator.instance.callback?()
+						}
 					} else {
 						buttons[0].isHidden = false
 						self.clearAuthData()
-						self.UpdateLabel(label: labels[0], text: Authorizator.instance.authError, isHidden: false)
-						self.UpdateLabel(label: labels[1], text: Authorizator.instance.authErrorText, isHidden: false)
+						self.updateLabel(label: labels[0], text: Authorizator.instance.authError, isHidden: false)
+						self.updateLabel(label: labels[1], text: Authorizator.instance.authErrorText, isHidden: false)
 					}
 				}
 			case "/authorize", "/oauth/authorize" :
@@ -159,39 +173,39 @@ class Authorizator {
 
 				aIndicators[0].isHidden = true
 
-				self.AuthWebView?.isHidden = false
+				self.authWebView?.isHidden = false
 
-				self.UpdateLabel(label: labels[0], text: "", isHidden: true)
-				self.UpdateLabel(label: labels[1], text: "", isHidden: true)
+				self.updateLabel(label: labels[0], text: "", isHidden: true)
+				self.updateLabel(label: labels[1], text: "", isHidden: true)
 
 				if (curUrl?.contains("state=group"))! {
 					print("auth_group")
-					self.UpdateLabel(label: labels[2], text: "Доступ к группам", isHidden: false)
-					self.ProcessingAuthUrlVars(
+					self.updateLabel(label: labels[2], text: "Доступ к группам", isHidden: false)
+					self.processingAuthUrlVars(
 						type: "authorize_user",
 						data: [:]
 					)
 				} else if (curUrl?.contains("state=user"))! {
 					print("auth_user")
-					self.UpdateLabel(label: labels[2], text: "Доступ к аккаунту", isHidden: false)
-					self.ProcessingAuthUrlVars(
+					self.updateLabel(label: labels[2], text: "Доступ к аккаунту", isHidden: false)
+					self.processingAuthUrlVars(
 						type: "authorize_group",
 						data: [:]
 					)
 				}
 			default:
-				self.AuthWebView?.isHidden = false
+				self.authWebView?.isHidden = false
 				print("load another url: \(curUrl!)")
 			break;
 		}
 	}
 
-	private func UpdateLabel(label: UILabel, text: String, isHidden: Bool){
+	private func updateLabel(label: UILabel, text: String, isHidden: Bool){
 		label.text = text
 		label.isHidden = isHidden
 	}
 
-	private func ProcessingAuthUrlVars(type: String, data: [String: String]?){
+	private func processingAuthUrlVars(type: String, data: [String: String]?){
 		switch type {
 			case "blank_user" :
 				for (index, value) in data! {
@@ -223,7 +237,7 @@ class Authorizator {
 							Authorizator.instance.authErrorText = value
 						default:
 							if index.contains("access_token_") {
-								Group.SetGroupTokenFromString(groupString: index, token: value)
+								Group.setGroupTokenFromString(groupString: index, token: value)
 							}
 						break;
 					}
@@ -235,7 +249,7 @@ class Authorizator {
 		}
 	}
 
-	public func AuthSuccess () {
+	public func authSuccess (callback: () -> ()) {
 		//how go to next screen?
 	}
 }
